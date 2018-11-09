@@ -1,0 +1,54 @@
+#if __has_include(".extend.Xresources")
+#include ".extend.Xresources"
+#endif
+
+! ^ The above lines are no comments!
+! Leave them as they are if a file ~/.extend.Xresources is being used on your system.
+! config can be added there or also here below.
+! For comments use "!"
+
+Xft.dpi: 96
+Xft.antialias: true
+Xft.hinting: true
+Xft.rgba: rgb
+Xft.autohint: false
+Xft.hintstyle: hintslight
+Xft.lcdfilter: lcddefault
+
+URxvt*foreground: white
+URxvt*background: black
+
+URxvt*font: xft:Terminus:size=9:antialias=true
+
+! gray/white
+*color0:  #404040
+*color8:  #808080
+*color7:  #F5F5F5
+*color15: #FFFFFF
+! red
+*color1:  #FF5252
+*color9:  #FF8A80
+! green
+*color2:  #20B684
+*color10: #04EB00
+! orange
+*color3:  #FFDE03
+*color11: #FFFF5B
+! blue
+*color4:  #0088FF
+*color12: #70BCFF
+! magenta
+*color5:  #D831B0
+*color13: #FF71E8
+! cyan
+*color6:  #008899
+*color14: #33BBFF
+
+URxvt.scrollBar: false
+
+URxvt.borderLess: false
+
+URxvt.perl-ext-common:		autocomplete-ALL-the-things
+URxvt.keysym.Control-Tab:	perl:aAtt:word-complete
+URxvt.keysym.Control-question:	perl:aAtt:fuzzy-complete
+URxvt.keysym.Control-quotedbl:	perl:aAtt:undo
