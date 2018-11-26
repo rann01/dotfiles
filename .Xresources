@@ -29,8 +29,8 @@ URxvt*font: xft:Terminus:size=9:antialias=true
 *color1:  #FF5252
 *color9:  #FF8A80
 ! green
-*color2:  #20B684
-*color10: #04EB00
+*color2:  #04EB00
+*color10: #20B684
 ! orange
 *color3:  #FFDE03
 *color11: #FFFF5B
@@ -46,7 +46,9 @@ URxvt*font: xft:Terminus:size=9:antialias=true
 
 URxvt.scrollBar: false
 
-URxvt.borderLess: false
+URxvt.transparent: true
+URxvt.shading: 50
+!URxvt.foreground: 
 
 URxvt.perl-ext-common:		autocomplete-ALL-the-things
 URxvt.keysym.Control-Tab:	perl:aAtt:word-complete

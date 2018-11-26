@@ -35,7 +35,11 @@ colors() {
 
 [ -r /usr/share/bash-completion/bash_completion   ] && . /usr/share/bash-completion/bash_completion
 
+#aliases
+
 alias ls='ls --color=auto'
+#remove orphans
+alias autoremove='sudo pacman -Rns $(pacman -Qtdq)' 
 
 # Escaped ANSI colors...
 BLD="\[\e[21m\]"
@@ -57,16 +61,5 @@ LCYN="\[\e[96m\]"
 LWHT="\[\e[97m\]"
 RESET="\[\e[0m\]"
 
-# Obtain current git branch
-function parse_git_branch() {
-	BRANCH=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
-	if [ ! "${BRANCH}" == "" ]
-	then
-		echo "[${BRANCH}] "
-	else
-		echo ""
-	fi
-}
-
 # Custom prompt
- export PS1="${LMAG}\u${WHT}@${LCYN}\h${RESET} \W ${YEL}\`parse_git_branch\`${RESET}\$ "
+export PS1="${LGRN}\u${WHT}@${LCYN}\h ${RESET}\W$ "
