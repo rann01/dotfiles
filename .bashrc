@@ -4,6 +4,10 @@
 
 [[ $- != *i* ]] && return
 
+#opens man pages in nano
+#disabled as it fills pages with ugly color escapes
+#export MANPAGER="nano -"
+
 colors() {
 	local fgc bgc vals seq0
 
