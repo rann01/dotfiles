@@ -44,6 +44,11 @@ colors() {
 alias ls='ls --color=auto'
 #remove orphans
 alias autoremove='sudo pacman -Rns $(pacman -Qtdq)' 
+#open manpages in nano
+nanoman() {
+	/usr/bin/man "$1" > ~/.mantemp.txt && nano ~/.mantemp.txt
+}
+alias man='nanoman'
 
 # Escaped ANSI colors...
 BLD="\[\e[21m\]"
