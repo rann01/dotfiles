@@ -234,7 +234,7 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 #wal colorscheme reboot persistence thing 
 exec wal -R
 
-#lock script
+#lock
 bindsym Mod4+l exec i3lock -c 000000
 
 #PANIC
@@ -242,3 +242,6 @@ bindsym Mod1+Shift+XF86Launch1 exec poweroff
 
 #scrot
 bindsym Mod4+Shift+s exec scrot
+
+#ULTIMATE HACKER AESTHETIC
+bindsym Mod1+Shift+h exec edex-ui
