@@ -245,3 +245,6 @@ bindsym Mod4+Shift+s exec scrot
 
 #ULTIMATE HACKER AESTHETIC
 bindsym Mod1+Shift+h exec edex-ui
+
+#open ranger
+bindsym Mod1+Shift+f exec urxvt -e ranger
