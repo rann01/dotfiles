@@ -166,16 +166,16 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym $right       resize shrink width 10 px or 10 ppt
+        bindsym $left       resize shrink width 10 px or 10 ppt
         bindsym $down       resize grow height 10 px or 10 ppt
         bindsym $up         resize shrink height 10 px or 10 ppt
-        bindsym $left      resize grow width 10 px or 10 ppt
+        bindsym $right      resize grow width 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
-        bindsym Right        resize shrink width 10 px or 10 ppt
-        bindsym Up        resize grow height 10 px or 10 ppt
-        bindsym Down          resize shrink height 10 px or 10 ppt
-        bindsym Left       resize grow width 10 px or 10 ppt
+        bindsym Left        resize shrink width 10 px or 10 ppt
+        bindsym Down      resize grow height 10 px or 10 ppt
+        bindsym Up          resize shrink height 10 px or 10 ppt
+        bindsym Right       resize grow width 10 px or 10 ppt
 
         # back to normal: Enter or Escape or Mod1+r
         bindsym Return mode "default"
@@ -228,8 +228,8 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #d
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 
 #brightness control
-bindsym XF86MonBrightnessUp exec xbacklight -inc 10
-bindsym XF86MonBrightnessDown exec xbacklight -dec 10 
+bindsym XF86MonBrightnessUp exec xbacklight -inc 5
+bindsym XF86MonBrightnessDown exec xbacklight -dec 5
 
 #wal colorscheme reboot persistence thing 
 exec wal -R
@@ -248,3 +248,6 @@ bindsym Mod1+Shift+h exec edex-ui
 
 #open ranger
 bindsym Mod1+Shift+f exec urxvt -e ranger
+
+#open chrome
+bindsym Mod1+Shift+c exec google-chrome-stable
