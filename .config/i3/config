@@ -211,11 +211,14 @@ hide_edge_borders both
 #sleep
 bindsym $mod+Shift+s exec systemctl suspend | i3lock -c 000000
 
+#hibernate
+bindsym Mod4+Shift+s exec systemctl hibernate | i3lock -c 000000
+
 #set wallpaper
 exec sh ~/.fehbg &
 
 #border colors
-#			| bordr | bg    | text  | indcr  | sub-brdr | <- edit for 1px borders
+#			| bordr | bg    | text  | indcr  | sub-brdr | 
 client.focused          #FF0000 #000000 #FFFFFF #bfbfbf   #000000
 client.focused_inactive #333333 #5F676A #FFFFFF #484E50   #5F676A
 client.unfocused        #850000 #222222 #888888 #292D2E   #222222
