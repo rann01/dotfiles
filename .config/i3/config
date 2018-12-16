@@ -29,10 +29,10 @@ set $mod Mod1
 
 # use these keys for focus, movement, and resize directions when reaching for
 # the arrows is not convenient
-set $up l
-set $down k
-set $left j
-set $right semicolon
+set $up k
+set $down j
+set $left h
+set $right l
 
 # use Mouse+Mod1 to drag floating windows to their wanted position
 floating_modifier Mod1
@@ -75,7 +75,7 @@ bindsym Mod1+Shift+Up move up
 bindsym Mod1+Shift+Right move right
 
 # split in horizontal orientation
-bindsym Mod1+h split h
+bindsym Mod1+b split h
 
 # split in vertical orientation
 bindsym Mod1+v split v
@@ -245,9 +245,6 @@ bindsym Mod1+Shift+XF86Launch1 exec poweroff
 
 #scrot
 bindsym Mod1+Shift+a exec scrot
-
-#ULTIMATE HACKER AESTHETIC
-bindsym Mod1+Shift+h exec edex-ui
 
 #open ranger
 bindsym Mod1+Shift+f exec urxvt -e ranger
