@@ -244,7 +244,7 @@ bindsym Mod4+l exec i3lock -c 000000
 bindsym Mod1+Shift+XF86Launch1 exec poweroff
 
 #scrot
-bindsym Mod4+Shift+s exec scrot
+bindsym Mod1+Shift+a exec scrot
 
 #ULTIMATE HACKER AESTHETIC
 bindsym Mod1+Shift+h exec edex-ui
