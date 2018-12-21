@@ -274,4 +274,4 @@ include "/usr/share/nano/*.nanorc"
 
 ## Toggle line numbers (on by default)
 set linenumbers
-bind M-L linenumbers main ## (alt+l)
+bind M-` linenumbers main ## (alt+l)
