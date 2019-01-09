@@ -189,7 +189,7 @@ bindsym Mod1+r mode "resize"
 # finds out, if available)
 bar {
         status_command i3status
-		font pango:Terminus 8
+	font pango:Terminus 8
 }
 
 #######################################################################
