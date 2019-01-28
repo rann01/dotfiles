@@ -46,6 +46,27 @@ nanoman() {
 }
 alias man='nanoman'
 
+#James Fenn's magical gcc aliases
+# gcc  - acts as an alias of gcc; enables all warning flags, treats warnings as
+#        errors, and sets the output file to the name of the source file.
+#
+# Arguments should be passed to this alias after the name of the source file,
+# not before it; while gcc doesn't explicitly state it, it does accept the source
+# as the first argument, allowing additional arguments to be passed to this alias
+# without breaking the format.
+#
+# Ex:
+#   gcc --std=c99 test.c          Creates two binaries, "./--std=c99" and "./test",
+#                                 both of which contain the binary of "./test.c".
+#
+#   gcc test.c --std=c99          Creates one binary, "./test", using c99.
+#
+gcc() { /usr/bin/gcc $@ -Wall -Werror -o ${1%.*}; }
+
+# gccx - runs gcc (the alias above), then executes the compiled binary.
+gccx() { gcc $@ && command $(realpath "${1%.*}"); }
+
+
 # Escaped ANSI colors...
 BLD="\[\e[21m\]"
 BLK="\[\e[30m\]"
