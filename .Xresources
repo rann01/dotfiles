@@ -48,7 +48,7 @@ URxvt.scrollBar: false
 
 URxvt.transparent: true
 URxvt.shading: 50
-!URxvt.foreground: 
+!URxvt.foreground:  
 
 URxvt.perl-ext-common:		autocomplete-ALL-the-things
 URxvt.keysym.Control-Tab:	perl:aAtt:word-complete

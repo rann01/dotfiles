@@ -188,8 +188,9 @@ bindsym Mod1+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3status
-	font pango:Terminus 8
+		status_command /usr/bin/i3status-rs ~/.config/i3status-rs/config.toml
+		font pango: Terminus 8
+
 }
 
 #######################################################################
@@ -219,7 +220,7 @@ bindsym Mod4+Shift+s exec systemctl hibernate | i3lock -c 000000
 exec sh ~/.fehbg &
 
 #border colors
-#			| bordr | bg    | text  | indcr  | sub-brdr | 
+#						| bordr | bg    | text  | indcr  | sub-brdr | 
 client.focused          #FF0000 #000000 #FFFFFF #bfbfbf   #000000
 client.focused_inactive #333333 #5F676A #FFFFFF #484E50   #5F676A
 client.unfocused        #850000 #222222 #888888 #292D2E   #222222
@@ -227,9 +228,12 @@ client.urgent           #FF5252 #FF5252 #000000 #FF5252   #FF5252
 client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
 
 # Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume 
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume 
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+##increase sound volume
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% 
+##decrease sound volume 
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
+##mute sound
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 
 #brightness control
 bindsym XF86MonBrightnessUp exec xbacklight -inc 5
