@@ -40,11 +40,6 @@ colors() {
 alias ls='ls --color=auto'
 #remove orphans
 alias autoremove='sudo pacman -Rns $(pacman -Qtdq)' 
-#open manpages in nano
-nanoman() {
-	/usr/bin/man "$1" > ~/.mantemp.txt && nano ~/.mantemp.txt
-}
-alias man='nanoman'
 
 #James Fenn's magical gcc aliases
 # gcc  - acts as an alias of gcc; enables all warning flags, treats warnings as
