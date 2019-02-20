@@ -51,7 +51,7 @@ battery 0 {
 }
 
 tztime local {
-		format = "%a %m/%d/%y %I:%M:%S%p"
+	format = "%a %m/%d/%y %I:%M:%S%p"
 }
 
 load {
@@ -64,12 +64,13 @@ cpu_usage {
 }
 
 cpu_temperature 0 {
-	format = "%degrees C"
+	format = "%degrees°C"
 	max_threshold = 85
 }
 
 disk "/" {
         format = "%used / %total (%percentage_used)"
+	low_threshold = 10
 }
 
 volume master {
