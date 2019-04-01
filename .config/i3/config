@@ -220,10 +220,10 @@ default_floating_border pixel 1
 hide_edge_borders both
 
 #sleep
-bindsym Mod1+Shift+s exec systemctl suspend | i3lock -c 000000
+bindsym Mod1+Shift+s exec systemctl suspend | ~/.scripts/corrupterLock.sh
 
 #hibernate
-bindsym Mod4+Shift+s exec systemctl hibernate | i3lock -c 000000
+bindsym Mod4+Shift+s exec systemctl hibernate | ~/.scripts/corrupterLock.sh
 
 #set wallpaper
 exec sh ~/.fehbg &
@@ -252,7 +252,8 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 5
 exec wal -R
 
 #lock
-bindsym Mod4+l exec i3lock -c 000000
+#bindsym Mod4+l exec i3lock -c 000000
+bindsym Mod4+l exec ~/.scripts/corrupterLock.sh
 
 #PANIC
 bindsym Mod1+Shift+XF86Launch1 exec poweroff
