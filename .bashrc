@@ -56,7 +56,7 @@ alias autoremove='sudo pacman -Rns $(pacman -Qtdq)'
 #
 #   gcc test.c --std=c99          Creates one binary, "./test", using c99.
 #
-gcc() { /usr/bin/gcc $@ -Wall -Werror -o ${1%.*}; }
+gcc() { /usr/bin/gcc $@ -Wall -o ${1%.*}; }
 
 # gccx - runs gcc (the alias above), then executes the compiled binary.
 gccx() { gcc $@ && command $(realpath "${1%.*}"); }
