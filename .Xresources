@@ -46,8 +46,10 @@ URxvt*font: xft:Terminus (TTF):size=9
 
 URxvt.scrollBar: false
 
-URxvt.transparent: true
-URxvt.shading: 50
+urxvt*depth:32
+urxvt*background: rgba/0000/0000/0000/b800
+!URxvt.transparent: true
+!URxvt.shading: 50
 !URxvt.foreground:  
 
 URxvt.perl-ext-common:		autocomplete-ALL-the-things
