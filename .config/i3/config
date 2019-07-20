@@ -342,3 +342,6 @@ bindsym Mod1+Shift+f exec urxvt -e ranger
 
 #open chrome
 bindsym Mod1+Shift+c exec google-chrome-stable
+
+#X61t rotation script
+bindsym XF86RotateWindows exec ~/.scripts/rotate.sh
