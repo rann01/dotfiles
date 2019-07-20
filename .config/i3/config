@@ -36,7 +36,11 @@ set $right l
 floating_modifier Mod1
 
 # start a terminal
+<<<<<<< HEAD
 bindsym Mod1+Return exec urxvt
+=======
+bindsym Mod1+Return exec i3-sensible-terminal
+>>>>>>> 808a9dd41b10e7b2130d9c04a13f34c68b0d70d8
 
 # kill focused window
 bindsym Mod1+Shift+q kill
@@ -126,7 +130,11 @@ set $ws10 "十"
 #                   _--"".-.._   ,,::::::'"\/""'-:-:/
 #              _.-""::_:_:::::'-8b---"            "'
 #           .-/  ::::<  |\::::::"\
+<<<<<<< HEAD
 #           \/:::/::::'\\ |:::b::\	     "Fuckin weeb"
+=======
+#           \/:::/::::'\\ |:::b::\	 	"Fuckin weeb"
+>>>>>>> 808a9dd41b10e7b2130d9c04a13f34c68b0d70d8
 #           /|::/:::/::::-::b:%b:\|
 #            \/::::d:|8:::b:"%%%%%\
 #            |\:b:dP:d.:::%%%%%"""-,
