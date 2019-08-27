@@ -20,7 +20,7 @@ font pango:DejaVu Sans Mono 8
 # font, it doesn't scale on retina/hidpi displays.
 
 #start compton
-#exec_always --no-startup-id compton --config ~/.config/compton.conf
+exec_always --no-startup-id compton --no-fading-openclose -D 0 
 
 # mod key
 set $mod Mod1
