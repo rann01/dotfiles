@@ -334,8 +334,10 @@ bindsym Mod4+l exec ~/.scripts/corrupterLock.sh
 #PANIC
 bindsym Mod1+Shift+XF86Launch1 exec poweroff
 
-#scrot
-bindsym Mod1+Shift+a exec scrot
+#snipping tool-esque screen capture
+bindsym --release Print exec scrot -s -e 'xclip -selection clipboard -t "image/png" < $f'
+#fullscreen screenshot
+bindsym --release Shift+Print exec scrot -e 'xclip -selection clipboard -t "image/png" < $f'
 
 #open ranger
 bindsym Mod1+Shift+f exec urxvt -e ranger
