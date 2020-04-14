@@ -19,9 +19,6 @@ font pango:DejaVu Sans Mono 8
 # X core fonts rendering does not support right-to-left and this being a bitmap
 # font, it doesn't scale on retina/hidpi displays.
 
-#start compton
-exec_always --no-startup-id compton --no-fading-openclose -D 0 
-
 # mod key
 set $mod Mod1
 
@@ -202,28 +199,28 @@ set $ws10 "十"
 #          mmmmmmMMMM"
 
 # switch to workspace
-bindsym Mod1+1 workspace $ws1
-bindsym Mod1+2 workspace $ws2
-bindsym Mod1+3 workspace $ws3
-bindsym Mod1+4 workspace $ws4
-bindsym Mod1+5 workspace $ws5
-bindsym Mod1+6 workspace $ws6
-bindsym Mod1+7 workspace $ws7
-bindsym Mod1+8 workspace $ws8
-bindsym Mod1+9 workspace $ws9
-bindsym Mod1+0 workspace $ws10
+bindsym Mod1+1 workspace number 1:一
+bindsym Mod1+2 workspace number 2:二
+bindsym Mod1+3 workspace number 3:三
+bindsym Mod1+4 workspace number 4:四
+bindsym Mod1+5 workspace number 5:五
+bindsym Mod1+6 workspace number 6:六
+bindsym Mod1+7 workspace number 7:七
+bindsym Mod1+8 workspace number 8:八
+bindsym Mod1+9 workspace number 9:九
+bindsym Mod1+0 workspace number 10:十
 
 # move focused container to workspace
-bindsym Mod1+Shift+1 move container to workspace $ws1
-bindsym Mod1+Shift+2 move container to workspace $ws2
-bindsym Mod1+Shift+3 move container to workspace $ws3
-bindsym Mod1+Shift+4 move container to workspace $ws4
-bindsym Mod1+Shift+5 move container to workspace $ws5
-bindsym Mod1+Shift+6 move container to workspace $ws6
-bindsym Mod1+Shift+7 move container to workspace $ws7
-bindsym Mod1+Shift+8 move container to workspace $ws8
-bindsym Mod1+Shift+9 move container to workspace $ws9
-bindsym Mod1+Shift+0 move container to workspace $ws10
+bindsym $mod+Shift+1 move container to workspace number 1:一
+bindsym $mod+Shift+2 move container to workspace number 2:二
+bindsym $mod+Shift+3 move container to workspace number 3:三
+bindsym $mod+Shift+4 move container to workspace number 4:四
+bindsym $mod+Shift+5 move container to workspace number 5:五
+bindsym $mod+Shift+6 move container to workspace number 6:六
+bindsym $mod+Shift+7 move container to workspace number 7:七
+bindsym $mod+Shift+8 move container to workspace number 8:八
+bindsym $mod+Shift+9 move container to workspace number 9:九
+bindsym $mod+Shift+0 move container to workspace number 10:十
 
 # reload the configuration file
 bindsym Mod1+Shift+w reload
@@ -262,12 +259,13 @@ bindsym Mod1+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-		#status_command /usr/bin/i3status-rs ~/.config/i3status-rs/config.toml
-		status_command i3status
-		font pango: Terminus (TTF) 9
+	strip_workspace_numbers yes
+	#status_command /usr/bin/i3status-rs ~/.config/i3status-rs/config.toml
+	status_command i3status
+	font pango: Terminus (TTF) 9
 
 	colors {
-#		| class				| bordr | bg    | text  |	
+#		| class				| bordr | bg    | text |
 		focused_workspace	#20B684 #20B684 #000000
 		active_workspace	#333333 #222222 #FFFFFF
 		inactive_workspace	#333333 #222222 #888888
@@ -325,7 +323,7 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 5
 bindsym XF86MonBrightnessDown exec xbacklight -dec 5
 
 #wal colorscheme reboot persistence thing 
-exec wal -R
+#exec wal -R
 
 #lock
 #bindsym Mod4+l exec i3lock -c 000000
@@ -343,7 +341,7 @@ bindsym --release Shift+Print exec scrot -e 'xclip -selection clipboard -t "imag
 bindsym Mod1+Shift+f exec urxvt -e ranger
 
 #open chrome
-bindsym Mod1+Shift+c exec google-chrome-stable
+bindsym Mod1+Shift+c exec google-chrome-stable --force-device-scale-factor=0.8
 
 #X61t rotation script
 bindsym XF86RotateWindows exec ~/.scripts/rotate.sh
