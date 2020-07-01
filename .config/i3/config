@@ -35,6 +35,9 @@ floating_modifier Mod1
 # start a terminal
 bindsym Mod1+Return exec urxvt
 
+# start dunst
+exec --no-startup-id "killall -q dunst; dunst"
+
 # kill focused window
 bindsym Mod1+Shift+q kill
 
