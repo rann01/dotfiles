@@ -36,7 +36,7 @@ floating_modifier Mod1
 bindsym Mod1+Return exec urxvt
 
 # start dunst
-exec --no-startup-id "killall -q dunst; dunst"
+exec --no-startup-id "killall -q dunst; n"
 
 # kill focused window
 bindsym Mod1+Shift+q kill
@@ -314,16 +314,18 @@ client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
 client.background 		#000000
 
 # Pulse Audio controls
-##increase sound volume
+#increase sound volume
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% 
-##decrease sound volume 
+#decrease sound volume 
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
-##mute sound
+#mute sound
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
+#mic mute
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute 1 toggle
 
 #brightness control
 bindsym XF86MonBrightnessUp exec xbacklight -inc 5
-bindsym XF86MonBrightnessDown exec xbacklight -dec 5
+bindsym XF86MonBrightnessDown exec xbacklight -dec 5 
 
 #wal colorscheme reboot persistence thing 
 #exec wal -R
@@ -336,15 +338,15 @@ bindsym Mod4+l exec ~/.scripts/corrupterLock.sh
 bindsym Mod1+Shift+XF86Launch1 exec poweroff
 
 #snipping tool-esque screen capture
-bindsym --release Print exec scrot -s -e 'xclip -selection clipboard -t "image/png" < $f'
+bindsym --release Print exec scrot -s -e 'xclip -selection clipboard -t "image/png" < $f' && notify-send "Snip taken!"
 #fullscreen screenshot
-bindsym --release Shift+Print exec scrot -e 'xclip -selection clipboard -t "image/png" < $f'
+bindsym --release Shift+Print exec scrot -e 'xclip -selection clipboard -t "image/png" < $f' && notify-send "Screenshot taken!"
 
 #open ranger
 bindsym Mod1+Shift+f exec urxvt -e ranger
 
 #open chrome
-bindsym Mod1+Shift+c exec google-chrome-stable --force-device-scale-factor=0.8
+bindsym Mod1+Shift+c exec google-chrome-stable #--force-device-scale-factor=0.8
 
 #X61t rotation script
 bindsym XF86RotateWindows exec ~/.scripts/rotate.sh
