@@ -66,18 +66,18 @@ cpu_usage {
 
 cpu_temperature 0 {
 	format = "%degrees°C"
-	max_threshold = 85
+	max_threshold = 80
 }
 
 disk "/" {
-	format = "%used (%percentage_used)"
+	format = "/: %used (%percentage_used)"
 	low_threshold = 10
 }
 
 memory {
-    	format = "%used (%percentage_used)"
-    	threshold_degraded = 10
-    	threshold_critical = 5
+	format = "MEM: %used (%percentage_used)"
+	threshold_degraded = 10
+ 	threshold_critical = 5
 }
 
 volume master {
