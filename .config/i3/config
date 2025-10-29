@@ -120,86 +120,6 @@ set $ws7 "七"
 set $ws8 "八"
 set $ws9 "九"
 set $ws10 "十"
-#                                        __.-"..--,__
-#                               __..---"  | _|    "-_\
-#                        __.---"          | V|::.-"-._D
-#                   _--"".-.._   ,,::::::'"\/""'-:-:/
-#              _.-""::_:_:::::'-8b---"            "'
-#           .-/  ::::<  |\::::::"\
-#           \/:::/::::'\\ |:::b::\	     "Fuckin weeb"
-#           /|::/:::/::::-::b:%b:\|
-#            \/::::d:|8:::b:"%%%%%\
-#            |\:b:dP:d.:::%%%%%"""-,
-#             \:\.V-/ _\b%P_   /  .-._
-#             '|T\   "%j d:::--\.(    "-.
-#             ::d<   -" d%|:::do%P"-:.   "-,
-#             |:I _    /%%%o::o8P    "\.    "\
-#              \8b     d%%%%%%P""-._ _ \::.    \
-#              \%%8  _./Y%%P/      .::'-oMMo    )
-#                H"'|V  |  A:::...:odMMMMMM(  ./
-#                H /_.--"JMMMMbo:d##########b/
-#             .-'o      dMMMMMMMMMMMMMMP""
-#           /" /       YMMMMMMMMM|
-#         /   .   .    "MMMMMMMM/
-#         :..::..:::..  MMMMMMM:|
-#          \:/ \::::::::JMMMP":/
-#           :Ao ':__.-'MMMP:::Y
-#           dMM"./:::::::::-.Y
-#          _|b::od8::/:YM::/
-#          I HMMMP::/:/"Y/"
-#           \'""'  '':|
-#            |    -::::\
-#            |  :-._ '::\
-#            |,.|    \ _:"o
-#            | d" /   " \_:\.
-#            ".Y. \       \::\
-#             \ \  \      MM\:Y
-#              Y \  |     MM \:b
-#              >\ Y      .MM  MM
-#              .IY L_    MP'  MP
-#              |  \:|   JM   JP
-#              |  :\|   MP   MM
-#              |  :::  JM'  JP|
-#              |  ':' JP   JM |
-#              L   : JP    MP |
-#              0   | Y    JM  |
-#              0   |     JP"  |
-#              0   |    JP    |
-#              m   |   JP     #
-#              I   |  JM"     Y
-#              l   |  MP     :"
-#              |\  :-       :|
-#              | | '.\      :|
-#              | | "| \     :|
-#               \    \ \    :|
-#               |  |  | \   :|
-#               |  |  |   \ :|
-#               |   \ \    | '.
-#               |    |:\   | :|
-#               \    |::\..|  :\
-#                ". /::::::'  :||
-#                  :|::/:::|  /:\
-#                  | \/::|: \' ::|
-#                  |  :::||    ::|
-#                  |   ::||    ::|
-#                  |   ::||    ::|
-#                  |   ::||    ::|
-#                  |   ': |    .:|
-#                  |    : |    :|
-#                  |    : |    :|
-#                  |    :||   .:|
-#                  |   ::\   .:|
-#                 |    :::  .::|
-#                /     ::|  :::|
-#             __/     .::|   ':|
-#    ...----""        ::/     ::
-#   /m_  AMm          '/     .:::
-#   ""MmmMMM#mmMMMMMMM"     .:::m
-#      """YMMM""""""P        ':mMI
-#               _'           _MMMM
-#           _.-"  mm   mMMMMMMMM"
-#          /      MMMMMMM""
-#          mmmmmmMMMM"
 
 # switch to workspace
 bindsym Mod1+1 workspace number 1:一
@@ -346,7 +266,7 @@ bindsym --release Shift+Print exec scrot -e 'xclip -selection clipboard -t "imag
 bindsym Mod1+Shift+f exec urxvt -e ranger
 
 #open chrome
-bindsym Mod1+Shift+c exec google-chrome-stable #--force-device-scale-factor=0.8
+#bindsym Mod1+Shift+c exec google-chrome-stable #--force-device-scale-factor=0.8
 
 #X61t rotation script
 bindsym XF86RotateWindows exec ~/.scripts/rotate.sh
